@@ -5,6 +5,8 @@
  */
 package cat.copernic.m05_uf02_examen_final;
 
+import java.security.InvalidParameterException;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -60,7 +62,7 @@ public class Avaluador {
         double sumaNotes = 0;
 
         if (estudiant == null) {
-            throw new Exception("Estudiant no pot ser null");
+            throw new Exception("Estudiant no pot ser null", new IllegalArgumentException());
         }
 
         if (estudiant.getPrimerParcial() >= notaSupera) {
@@ -87,9 +89,8 @@ public class Avaluador {
      */
     public double mitjana(Estudiant estudiant) throws Exception {
         double sumaNotes = 0;
-
         if (estudiant == null) {
-            throw new Exception("Estudiant no pot ser null");
+            throw new Exception("Estudiant no pot ser null", new InvalidParameterException());
         }
 
         sumaNotes = estudiant.getPrimerParcial()

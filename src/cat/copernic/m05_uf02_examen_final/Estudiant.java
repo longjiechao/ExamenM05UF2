@@ -49,32 +49,32 @@ public class Estudiant {
      * @return true si dos estudiants són iguals. false si dos estudiants són
      * diferents
      */
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (this == obj) {
-//            return true;
-//        }
-//        if (obj == null) {
-//            return false;
-//        }
-//        if (getClass() != obj.getClass()) {
-//            return false;
-//        }
-//        final Estudiant other = (Estudiant) obj;
-//        if (Double.doubleToLongBits(this.primerParcial) != Double.doubleToLongBits(other.primerParcial)) {
-//            return false;
-//        }
-//        if (Double.doubleToLongBits(this.segundoParcial) != Double.doubleToLongBits(other.segundoParcial)) {
-//            return false;
-//        }
-//        if (Double.doubleToLongBits(this.tercerParcial) != Double.doubleToLongBits(other.tercerParcial)) {
-//            return false;
-//        }
-//        if (!Objects.equals(this.nom, other.nom)) {
-//            return false;
-//        }
-//        return true;
-//    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Estudiant other = (Estudiant) obj;
+        if (Double.doubleToLongBits(this.primerParcial) != Double.doubleToLongBits(other.primerParcial)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.segundoParcial) != Double.doubleToLongBits(other.segundoParcial)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.tercerParcial) != Double.doubleToLongBits(other.tercerParcial)) {
+            return false;
+        }
+        if (!Objects.equals(this.nom, other.nom)) {
+            return false;
+        }
+        return true;
+    }
     
     
     
