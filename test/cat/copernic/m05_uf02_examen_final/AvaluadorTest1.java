@@ -36,8 +36,9 @@ public class AvaluadorTest1 {
     
     @Before
     public void setUp() {
-        instance = new Estudiant("Longjie",5.0,5.0,5.0);
+        instance = new Estudiant("Luis",5.0,5.0,5.0);
         Avaluador = new Avaluador();
+        
         
     }
     
@@ -60,6 +61,7 @@ public class AvaluadorTest1 {
      */
     @Test
     public void testMitjana() throws Exception {
+        
         assertEquals(5.0,Avaluador.mitjana(instance),0.1);
     }
 
@@ -68,7 +70,11 @@ public class AvaluadorTest1 {
      */
     @Test
     public void testMillorEstudiantPerNotaMitjana() {
+        Estudiant new1 = new Estudiant("Juan",2.5,6.0,6.0);
+        Estudiant new2 = new Estudiant("Alex",6.0,8.5,4.0);
         
+        Estudiant[] estudiantArray = {instance, new1, new2};
+        assertEquals(new2,Avaluador.millorEstudiantPerNotaMitjana(estudiantArray));
     }
     
 }
