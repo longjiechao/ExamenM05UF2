@@ -34,18 +34,6 @@ public class AvaluadorTest3 {
     @Rule
     public Timeout globalTimeout = Timeout.millis(10);
     
-    @Rule
-    public final ExternalResource externalResourse = new ExternalResource(){
-        @Override
-        protected void before() throws Throwable {
-            System.out.println("en before de external resource");
-        };
-        
-        @Override
-        protected void after(){
-            System.out.println("en after de external resource");
-        };
-    };
     
     public AvaluadorTest3() {
     }
@@ -93,14 +81,6 @@ public class AvaluadorTest3 {
         thrown.expectCause(Is.isA(InvalidParameterException.class));
         thrown.expectMessage(CoreMatchers.startsWith("Estudiant no pot ser null"));
         assertEquals(5.0,Avaluador.mitjana(instance),0.1);
-    }
-
-    /**
-     * Test of millorEstudiantPerNotaMitjana method, of class Avaluador.
-     */
-    @Test
-    public void testMillorEstudiantPerNotaMitjana() {
-        
     }
     
 }
