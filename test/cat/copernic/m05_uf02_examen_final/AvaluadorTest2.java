@@ -37,6 +37,8 @@ public class AvaluadorTest2 {
     public double tercerParcial;
     @Parameter(4)
     public double media;
+//    @Parameter(5)
+//    public String mejorNota;
     
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
@@ -117,7 +119,11 @@ public class AvaluadorTest2 {
      */
     @Test
     public void testMillorEstudiantPerNotaMitjana() {
-//        assertEquals("a",Avaluador.millorEstudiantPerNotaMitjana(instance));
+//        Estudiant malaNotaTest = new Estudiant("Juan",2.5,2.5,2.5);
+//        Estudiant buenaNotaTest = new Estudiant("Alex",7.5,7.5,7.5);
+//        
+//        Estudiant[] estudiantArray = {instance, malaNotaTest, buenaNotaTest};
+//        assertEquals(mejorNota,Avaluador.millorEstudiantPerNotaMitjana(estudiantArray));
     }
     
 }

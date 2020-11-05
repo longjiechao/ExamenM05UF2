@@ -70,8 +70,8 @@ public class AvaluadorTest1 {
      */
     @Test
     public void testMillorEstudiantPerNotaMitjana() {
-        Estudiant new1 = new Estudiant("Juan",2.5,6.0,6.0);
-        Estudiant new2 = new Estudiant("Alex",6.0,8.5,4.0);
+        Estudiant new1 = new Estudiant("Juan",2.5,2.5,2.5);
+        Estudiant new2 = new Estudiant("Alex",7.5,7.5,7.5);
         
         Estudiant[] estudiantArray = {instance, new1, new2};
         assertEquals(new2,Avaluador.millorEstudiantPerNotaMitjana(estudiantArray));
